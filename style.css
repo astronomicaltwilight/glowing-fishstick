@@ -1,0 +1,251 @@
+:root {
+    --red: rgba(219, 0, 0, 1);
+    --blue: rgba(21, 95, 179, 1);
+    --white: white;
+    --background: var(--white);
+    --text-color: var(--blue);
+    --scrollbar-color: var(--red);
+
+    /* Border Properties */
+    --border-color: var(--red);
+    --border-width: 3px;
+}
+
+@font-face {
+    font-family: "Libre Franklin";
+    src: url('./fonts/LibreFranklin-VariableFont_wght.ttf'); /* Ensure this path is correct */
+}
+
+@font-face {
+    font-family: "Libre Franklin Italic";
+    src: url('./fonts/LibreFranklin-Italic-VariableFont_wght.ttf'); /* Ensure this path is correct */
+}
+
+/* ── General body and html styles for full-height layout ── */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Libre Franklin", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background);
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* ── Main layout grid (wrapper) ─────────────────────────────────────────── */
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    height: 100vh;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 3fr 9fr;   /* Sidebar 3fr, Main content 9fr */
+    grid-template-rows: 60px 1fr 60px; /* Header row 60px, content auto, footer row 60px */
+    grid-template-areas:
+        "logo main"
+        "side main"
+        "head main";
+}
+
+.wrapper > * {
+    border-bottom: 1px solid var(--red);
+    background-color: var(--background);
+    background-blend-mode: soft-light;
+    padding: 15px;
+}
+
+/* ── Grid area assignments ───────────────────────────────────────────────── */
+.logo-area {
+    grid-area: logo;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header {
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 0;
+}
+
+.sidebar {
+    grid-area: side;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.content-area {
+    grid-area: main;
+    margin-left: 15px;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) transparent;
+    border-bottom: 0;
+    border-left: 1px solid var(--border-color);
+}
+
+/* ── Navigation styling ───────────────────────────────────────────────────── */
+nav {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav a:hover {
+    background-color: rgba(240, 140, 0, 0.2);
+    color: #000;
+}
+
+/* ── Masonry Image Grid (3 columns) ───────────────────────────────────────── */
+.image-grid {
+    /* 3 equal-width columns */
+    column-count: 3;
+    column-gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.image-grid img {
+    /* Each image fills its column’s width, height auto to preserve aspect ratio */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 15px;       /* gap between items vertically */
+    border: 1px solid var(--red);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.03);
+    /* Optional shadow:
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    */
+}
+
+/* ── Project list styling ───────────────────────────────────────────────────── */
+.project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-item {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-title {
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+
+.project-dot {
+    color: var(--red);
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.project-details {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* ── Line styling (SVG or canvas) ─────────────────────────────────────────── */
+.line {
+    stroke: rgb(237, 28, 36);
+    stroke-width: 2.778;
+    stroke-linecap: round;
+}
+
+/* ── Responsive adjustments ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow: auto;
+        height: auto;
+    }
+
+    .wrapper {
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 1fr;      /* Single-column layout on mobile */
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "logo"
+            "head"
+            "side"
+            "main";
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .logo-area,
+    .header,
+    .sidebar,
+    .content-area {
+        grid-column: span 1; /* Full-width */
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .sidebar {
+        min-height: 200px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin-bottom: 10px;
+    }
+
+    /* ── Masonry Image Grid: switch to auto-fit columns with fixed image height ── */
+    .image-grid {
+        column-count: 2;      /* reduce to 2 columns on mobile */
+        column-gap: 10px;
+    }
+
+    .image-grid img {
+        height: 150px;       /* Fixed height for consistent row alignment */
+        object-fit: contain;
+        margin-bottom: 10px; /* smaller vertical gap */
+    }
+}
