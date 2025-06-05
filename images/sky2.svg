@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6181.5107"
+   height="1466.4323"
+   id="svg2"
+   version="1.1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title4476">Skies</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3209">
+      <stop
+         id="stop3211"
+         offset="0"
+         style="stop-color:#ff7a17;stop-opacity:1;" />
+      <stop
+         style="stop-color:#d1c397;stop-opacity:1"
+         offset="0.09701671"
+         id="stop3213" />
+      <stop
+         style="stop-color:#6c9fdd;stop-opacity:1"
+         offset="0.22990704"
+         id="stop3215" />
+      <stop
+         style="stop-color:#335bae;stop-opacity:1"
+         offset="0.36176014"
+         id="stop3217" />
+      <stop
+         style="stop-color:#1c3172;stop-opacity:1"
+         offset="0.55910349"
+         id="stop3219" />
+      <stop
+         style="stop-color:#131f51;stop-opacity:1"
+         offset="0.85514021"
+         id="stop3221" />
+      <stop
+         id="stop3223"
+         offset="1"
+         style="stop-color:#101d49;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient3209"
+       id="linearGradient2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(17.701521,0,0,9.677959,-1671.3861,-1191.3157)"
+       x1="226.27417"
+       y1="470.51431"
+       x2="226.27417"
+       y2="316.91797" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Skies</dc:title>
+        <dc:date>01. October 2012</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Georg Adelmann</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Creative Commons Zero License</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Georg Adelmann</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>sky</rdf:li>
+            <rdf:li>vector</rdf:li>
+            <rdf:li>gradient</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Twelve sky gradients</dc:description>
+        <dc:relation />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(-1189.6116,-1886.0946)">
+    <rect
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke:none;stroke-width:3.13926"
+       id="rect2996-7-4-3-4-9"
+       width="7181.5107"
+       height="1466.4324"
+       x="1189.6116"
+       y="1886.0946" />
+  </g>
+</svg>
